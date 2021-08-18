@@ -1,0 +1,7 @@
+.place-list {
+  list-style: none; /* removes the bullets to <li> items */
+  margin: 1rem auto; /* only 1rem space away from element top and bottom, side to side there's none */
+  padding: 0;
+  width: 90%;
+  max-width: 40rem;
+}

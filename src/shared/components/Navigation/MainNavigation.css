@@ -1,0 +1,56 @@
+/* if media screen size is below 768px then active this selector
+ this selector positions the <button> wrapped <span> hamburger lines on upper left, along with transparent background */
+.main-navigation__menu-btn {
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+/* makings of the smart-phone/tablet three white hamburger lines on the upper left corner */
+/* this is when media query is under 768px, this will show in our mobile/tablet */
+/* we turn off this three white lines when we pass 768px, look at @media below */
+.main-navigation__menu-btn span {
+  display: block; 
+  width: 3rem;
+  height: 2.5px;
+  background: white;
+}
+
+.main-navigation__title {
+  color: white;
+}
+
+.main-navigation__title a {
+  text-decoration: none; 
+  color: white;
+}
+
+/* This turns off display of our NavLinks on the right of our row for mobile/tablet view
+   Once we reach pass 768px, then we activate the bottom for display: block */
+.main-navigation__header-nav {
+  display: none;
+}
+
+.main-navigation__drawer-nav {
+  height: 100%;
+}
+
+/**** BASICALLY THE MEDIA BELOW TRIGGERS FOR LAPTOP SCREEN-SIZE VIEW ****/
+/* This @media will turn on once we reach past 768px in screen size. 
+   so if we pass that, then this turns off display of our 3 hamburger lines above for .main-navigation__menu-btn */
+@media (min-width: 768px){
+  .main-navigation__menu-btn {
+    display: none; 
+  }
+
+  .main-navigation__header-nav {
+    display: block; /* covers a block from side to side, horizontally */
+  }
+}
+

@@ -1,0 +1,27 @@
+/* .main-header is the css design for the pink nav bar */
+.main-header { 
+  width: 100%; /* we define width to span the entire page */
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ff0055;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+  padding: 0 1rem;
+  z-index: 5; /* this is a low stack order compared to the other z-index numbers in other CSS files, 
+                 like Backdrop will be in the middle stack order to grey out the back behind <SideDrawer> box */ 
+}
+
+main {
+  margin-top: 5rem; /* this will push 5rem bottom space to this <main> enclosing tag */
+                    
+}
+
+/* laptop view where 768px screen size is passed */
+@media (min-width: 768px) {
+  .main-header {
+    justify-content: space-between; /* inserts space between the elements within this html tag */
+  }
+}
